@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100&family=Martel&family=Roboto+Slab:wght@300&family=Slabo+27px&family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100&family=Martel&family=Permanent+Marker&family=Roboto+Slab:wght@300&family=Slabo+27px&family=Source+Serif+Pro&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Roboto Slab', serif;
+ scroll-behavior: smooth;
+}
+:root {
+    --text-color:rgb(255, 255, 255);
+    --shape-color:rgb(117, 126, 214);
+}
+
+/* Section-one Start */
+
+/* Menu Icon start*/
+.hamb{
+    cursor: pointer;
+    float: left;
+    padding: 20px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--text-color);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--text-color);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+} /* Hide checkbox */
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    border: solid var(--shape-color);
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(115, 255, 162, 0.822);
+}
+.side-menu:checked ~ .text{
+    display: none;
+}
+.side-menu:checked ~ .main-navbar .input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.side-menu:checked ~  .main-navbar .main-list {
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+/* Menu Icon end*/
+
+.section-one {
+    height: 100vh;
+    background-image: url("./images/Girl-ski-winter-snow_3840x2160.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+}
+.main-navbar{
+    width: 100%;
+    height: 100%;
+    transition: max-height .5s ease-out;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px 0px 10px ;
+    display: none;
+ }
+ .main-navbar .main-list {
+    list-style-type: none;
+    width: 500px;
+    max-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-list li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.2s;
+}
+.main-navbar .main-list li {
+    padding: 5px;
+    transition: 0.4s;
+    border: 1px solid transparent;
+    border-radius: 20px 10px;
+}
+.main-navbar .main-list li:hover{
+    background-color: var(--shape-color);
+} 
+.main-navbar .main-list li:hover a{
+    color: var(--text-color);
+}
+.main-navbar .input {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.main-navbar .search {
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+}
+.input .bx-search-alt-2{
+    border-bottom: 2px solid black;
+    margin-top: 12px;
+    padding-bottom: 10px;
+    
+
+}
+::placeholder{
+    font-size: 12px;
+    font-style: italic;
+  
+}
+.button {
+    font-weight: 700;
+    margin-top: 10px;
+    color: var(--text-color);
+    background-color: var(--shape-color);
+    padding: 10px 20px;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgba(30, 28, 146, 0.726);
+}
+.text a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.text p{
+    max-width: 500px;
+    font-weight: 400;
+    text-align: justify;
+    background-color: rgba(115, 255, 162, 0.822);
+    border: none;
+    border-radius: 10px 10px;
+}
+.text{
+    display: inline-block;
+    margin: 90px 0 0 20px;
+}
+.text h1{
+    font-family: 'Permanent Marker', cursive;
+    line-height: 40px;
+    font-size: 3em;
+    padding-bottom: 10px;
+}
+/* Section-one Close */
+
+/* Section-two Start  */
+
+.image-icon {
+    width: 50%;
+    height: 500px;
+    background-image: url("./images/skiing-background-hd-1920x1200-27246.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+.image-icon .bx-play {
+    font-size: 30px;
+    color: var(--shape-color);
+    border-radius: 50%;
+    border-bottom: 2px solid var(--text-color);
+    padding: 10px;
+    margin: 0px 0px 50px 50px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.image-icon .bx-play:hover{
+    color: var(--text-color);
+}
+.description-box {
+    width: 50%;
+    background-color: rgb(22, 22, 22);
+    height: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    float: left;
+}
+.description{
+    max-width: 350px;
+    margin-left: 100px;
+}
+.description h3{
+    color: var(--shape-color);
+}
+.description p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
+    padding: 10px 0;
+
+}
+
+/* Section-two Close  */
+
+/* Section-three Start  */
+.section-three {
+    clear: both;
+}
+.item-box img {
+    max-width: 200px;
+    height: 250px;
+}
+.item-box p {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+.item-box span {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    color: var(--shape-color);
+    margin-bottom: 10px;
+    text-align: center;
+}
+.view {
+    display: block;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 auto;
+    background-color: transparent;
+    transition: 0.5s;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.view:hover{
+    background-color:var(--shape-color);
+    border-color: transparent;
+    
+}
+.item-container {
+    width: 70%;
+    height: 500px;
+    float: left;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.women-collection {
+    width: 30%;
+    height: 500px;
+    background-image: url("./images/photo-1614270263016-ce6e3f460154.jpg");
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.women-collection h3 {
+    color: var(--text-color);
+    background-color: rgba(127, 255, 212, 0.11);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.women-collection h3:hover {
+    color: var(--shape-color);
+}
+
+/* Section-three Close  */
+
+/* Section-four Start  */
+.section-four{
+    clear:both;
+ 
+}
+.men-collection {
+    width: 30%;
+    height: 300px;
+    background-image: url("./images/240_F_354715262_QGJYFPSj6SrNADb23vS7Y4jvQqgKnTR4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.men-collection h3 {
+    color: var(--text-color);
+    transition: 0.5s;
+    cursor: pointer;
+    
+}
+.men-collection h3:hover {
+    color: var(--shape-color);
+}
+.collection-box {
+    width: 70%;
+    height: 300px;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.helmet img{
+    max-width: 70%;
+}
+.helmet {
+    width: 70%;
+    text-align: center;
+}
+.collection-text {
+    width: 70%;
+}
+.collection-text span {
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.collection-text h3 {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+/* Section-four Close  */
+
+/* Section-five Start  */
+.section-five {
+    clear: both;
+}
+.left-container {
+    width: 30%;
+    height: 500px;
+    background-color: rgb(1, 8, 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    
+    
+}
+.left-text-box {
+    max-width: 200px;
+    padding: 0 10px;
+}
+.left-container h3 {
+    color: var(--shape-color);
+}
+.left-container p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
+    margin: 10px 0;
+    
+}
+.right-container {
+    width: 70%;
+    height: 500px;
+    float: left;
+    background-image: url("./images/winter-snow-cold-christmas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* Section-five Close  */
+
+/* Final-section Start  */
+.final-section {
+    clear: both;
+    height: 500px;
+    background-color: rgb(47, 51, 56);
+   
+    
+}
+.contact-box-container {
+    padding: 100px 5px 0px 5px;
+    display: grid;
+    grid: auto/ auto auto auto auto auto;
+    justify-content: space-evenly;
+}
+
+.contact-box h5 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+.contact-box h5:hover {
+    color: var(--shape-color);
+}
+.contact-box p {
+    color: var(--shape-color);
+    font-size: 14px;
+    margin-bottom: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.contact-box p:hover {
+    color: var(--text-color);
+}
+.final-section>p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: var(--shape-color);
+    text-align: center;
+
+}
+.final-section>p strong {
+    color: var(--text-color);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.final-section>p strong:hover{
+    color: var(--shape-color);
+}
+.final-section .icons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons .bx {
+    color: var(--shape-color);
+    font-size: 22px;
+    padding: 0 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.icons .bx:hover {
+    color: var(--text-color);
+}
+.icons~a .bx{
+    color: var(--shape-color);
+    font-size: 36px;
+    display: block;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.icons~a .bx:hover{
+    color: var(--text-color);
+}
+.icons~a{
+    text-decoration: none;
+}
+/* Final-section Close  */
+
